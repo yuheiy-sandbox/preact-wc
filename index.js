@@ -44,7 +44,7 @@ class Disclosure extends HTMLElement {
 customElements.define('x-disclosure', Disclosure)
 
 render(
-  <x-disclosure onToggle={(isExpanded) => console.log(isExpanded)}>
+  <x-disclosure onToggle={(ev) => console.log(ev)}>
     <span slot="trigger">Disclosure</span>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
