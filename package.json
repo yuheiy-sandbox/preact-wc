@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "poi"
+  },
+  "dependencies": {
+    "@webcomponents/webcomponentsjs": "^1.1.0",
+    "preact": "^8.2.7"
+  },
+  "devDependencies": {
+    "poi": "^9.6.13"
+  },
+  "poi": {
+    "entry": "index.js",
+    "jsx": "h"
+  }
+}
