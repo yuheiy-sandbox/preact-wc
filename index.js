@@ -4,7 +4,10 @@ import { h, render } from 'preact'
 class Disclosure extends HTMLElement {
   static get template() {
     return `
-      <button id="trigger" type="button">toggle</button>
+      <button id="trigger" type="button">
+        <slot name="trigger"></slot>
+      </button>
+
       <div id="content" hidden>
         <slot></slot>
       </div>
@@ -42,6 +45,7 @@ customElements.define('x-disclosure', Disclosure)
 
 render(
   <x-disclosure onToggle={(isExpanded) => console.log(isExpanded)}>
+    <span slot="trigger">Disclosure</span>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
       facilis, aut facere corrupti dolores reiciendis sunt soluta excepturi
